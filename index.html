@@ -39,7 +39,8 @@ h2 { font: 30px/1.1 "Luckiest Guy", "Fredoka", sans-serif; margin: 0 0 4px; text
 .card, .page { margin: 0; background: var(--card); border: 2px solid var(--line); border-radius: 18px; overflow: hidden;
   scroll-margin-top: 16px; transition: box-shadow .3s; }
 .card:target, .page:target { border-color: var(--accent); box-shadow: 0 0 0 5px var(--accent); }
-.card img, .page img { display: block; width: 100%; height: auto; }
+.card img, .page img, .card video { display: block; width: 100%; height: auto; background: var(--line); }
+.note { color: var(--soft); font-size: 15px; margin: 14px 0 0; }
 .card figcaption { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px 14px; }
 .page figcaption { padding: 10px 14px; font-weight: 600; }
 .btn { display: inline-block; text-align: center; text-decoration: none; background: var(--accent); color: var(--accent-ink);
@@ -67,11 +68,37 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
   <h1>Oyen Kampung printables</h1>
   <p>Free coloring pages, phone wallpapers and cozy art starring Oyen, a chubby orange cat from a Malaysian kampung. Tap any download. No sign-up.</p>
   <nav>
-    <a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
+    <a href="#live">Live wallpapers</a><a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
     <a href="#notebook">Comic</a><a href="#stickers">Free stickers</a><a href="#peel">Free sticker app</a>
   </nav>
 </header>
 <main>
+<section id="live">
+  <h2>Live wallpapers</h2>
+  <p class="lead">Oyen moves. Ten-second loops, 1080 × 1920, no sound.</p>
+  <div class="grid"><figure class="card" id="live-fireflies">
+  <video src="files/oyen-live-fireflies.mp4" poster="img/live-fireflies.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Fireflies: Oyen chases a firefly."></video>
+  <figcaption><span><b>Fireflies</b> · Oyen chases a firefly.</span><a class="btn" href="files/oyen-live-fireflies.mp4" download>Download live wallpaper</a></figcaption>
+</figure><figure class="card" id="live-rain">
+  <video src="files/oyen-live-rain.mp4" poster="img/live-rain.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Rainy nap: A raindrop lands on his nose."></video>
+  <figcaption><span><b>Rainy nap</b> · A raindrop lands on his nose.</span><a class="btn" href="files/oyen-live-rain.mp4" download>Download live wallpaper</a></figcaption>
+</figure><figure class="card" id="live-padi">
+  <video src="files/oyen-live-padi.mp4" poster="img/live-padi.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Padi field morning: A butterfly flutters past."></video>
+  <figcaption><span><b>Padi field morning</b> · A butterfly flutters past.</span><a class="btn" href="files/oyen-live-padi.mp4" download>Download live wallpaper</a></figcaption>
+</figure><figure class="card" id="live-moon">
+  <video src="files/oyen-live-moon.mp4" poster="img/live-moon.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Moon on the zinc roof: A slow blink at the moon."></video>
+  <figcaption><span><b>Moon on the zinc roof</b> · A slow blink at the moon.</span><a class="btn" href="files/oyen-live-moon.mp4" download>Download live wallpaper</a></figcaption>
+</figure><figure class="card" id="live-veranda">
+  <video src="files/oyen-live-veranda.mp4" poster="img/live-veranda.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Veranda at dusk: A sleepy stretch and a yawn."></video>
+  <figcaption><span><b>Veranda at dusk</b> · A sleepy stretch and a yawn.</span><a class="btn" href="files/oyen-live-veranda.mp4" download>Download live wallpaper</a></figcaption>
+</figure><figure class="card" id="live-sunset">
+  <video src="files/oyen-live-sunset.mp4" poster="img/live-sunset.jpg" muted loop playsinline preload="none" width="420" height="747" aria-label="Oyen and Hitam at sunset: A paw on his friend&#x27;s shoulder."></video>
+  <figcaption><span><b>Oyen and Hitam at sunset</b> · A paw on his friend&#x27;s shoulder.</span><a class="btn" href="files/oyen-live-sunset.mp4" download>Download live wallpaper</a></figcaption>
+</figure></div>
+  <p class="note"><b>Android:</b> on Samsung and many Android phones, open the video in Gallery, tap the menu and choose
+  <i>Set as wallpaper</i> for the lock screen. <b>iPhone:</b> iPhone can't use a video as wallpaper directly. Convert it to a
+  Live Photo with a free app first, and note that some iOS versions only animate it when you press and hold.</p>
+</section>
 <section id="coloring">
   <h2>Coloring pages</h2>
   <p class="lead">A4 PDFs. Print at home, hand the kids some crayons.</p>
@@ -110,6 +137,7 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
   <figcaption><span>Fireflies</span><a class="btn" href="files/oyen-wallpaper-6.jpg" download>Download full size</a></figcaption>
 </figure></div>
 </section>
+
 <section id="cozy">
   <h2>Cozy art for bad days</h2>
   <p class="lead">Oyen doesn't fix anything. He just sits with you.</p>
@@ -229,6 +257,9 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
 </footer>
 <script>
 // Pins link to one item (#wallpaper-3). Jump there once the layout is ready, in case the browser restored an old scroll position.
+// Live previews play only while on screen, so the page stays light on mobile data.
+const io = new IntersectionObserver(es => es.forEach(x => { const v = x.target; if (x.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }), {rootMargin: '100px'});
+document.querySelectorAll('video').forEach(v => io.observe(v));
 addEventListener('load', () => { const t = location.hash && document.getElementById(location.hash.slice(1)); if (t) setTimeout(() => t.scrollIntoView({block: 'start'}), 150); });
 </script>
 </body>
