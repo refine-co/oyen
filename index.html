@@ -52,6 +52,8 @@ h2 { font: 30px/1.1 "Luckiest Guy", "Fredoka", sans-serif; margin: 0 0 4px; text
 .stickers p { margin: 0; max-width: 560px; }
 .peel { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
 .seeit { border-color: var(--accent); margin: 4px 0 2px; }
+.watch { border-color: var(--accent); margin-top: 18px; }
+.watch .btn { min-width: 120px; }
 .seeit .play { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: var(--accent);
   color: var(--accent-ink); display: grid; place-items: center; font-size: 18px; }
 .seeit .copy { flex: 1 1 240px; min-width: 0; }
@@ -73,11 +75,20 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
   <h1>Oyen Kampung printables</h1>
   <p>Free coloring pages, phone wallpapers and cozy art starring Oyen, a chubby orange cat from a Malaysian kampung. Tap any download. No sign-up.</p>
   <nav>
-    <a href="#live">Live wallpapers</a><a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
+    <a href="#watch">Watch</a><a href="#live">Live wallpapers</a><a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
     <a href="#notebook">Comic</a><a href="#stickers">Free stickers</a><a href="#peel">Free sticker app</a>
   </nav>
 </header>
 <main>
+<section id="watch">
+  <div class="stickers watch">
+    <div class="copy">
+      <p><b>A new Oyen story every day.</b> Full episodes on YouTube, short jokes on TikTok.</p>
+    </div>
+    <a class="btn" href="https://www.youtube.com/@oyen.kampung" rel="noopener">Watch on YouTube</a>
+    <a class="btn" href="https://www.tiktok.com/@refinecooyen" rel="noopener">Oyen on TikTok</a>
+  </div>
+</section>
 <section id="live">
   <h2>Live wallpapers</h2>
   <p class="lead">Oyen moves. Ten-second loops, 1080 × 1920, no sound.</p>
@@ -265,7 +276,7 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
 <footer>
   <p>Oyen is an original character. The pictures are drawn with AI from our own character designs.
   Free for personal use: set them as wallpapers, print them at home, share the link. Please don't resell them.</p>
-  <p><a href="https://www.youtube.com/@oyen.kampung" rel="noopener">Oyen on YouTube</a> · <a href="https://www.pinterest.com/refinecooyen/" rel="noopener">Oyen on Pinterest</a> · <a href="https://sticker.ly/s/DWU136" rel="noopener">Sticker pack</a></p>
+  <p><a href="https://www.youtube.com/@oyen.kampung" rel="noopener">Oyen on YouTube</a> · <a href="https://www.tiktok.com/@refinecooyen" rel="noopener">Oyen on TikTok</a> · <a href="https://www.pinterest.com/refinecooyen/" rel="noopener">Oyen on Pinterest</a> · <a href="https://sticker.ly/s/DWU136" rel="noopener">Sticker pack</a></p>
 </footer>
 <script>
 // Pins link to one item (#wallpaper-3). Jump there once the layout is ready, in case the browser restored an old scroll position.
