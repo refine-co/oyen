@@ -50,6 +50,10 @@ h2 { font: 30px/1.1 "Luckiest Guy", "Fredoka", sans-serif; margin: 0 0 4px; text
   background: var(--card); border: 2px solid var(--line); border-radius: 18px; padding: 18px; }
 .stickers p { margin: 0; max-width: 560px; }
 .peel { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.seeit { border-color: var(--accent); margin: 4px 0 2px; }
+.seeit .play { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: var(--accent);
+  color: var(--accent-ink); display: grid; place-items: center; font-size: 18px; }
+.seeit .copy { flex: 1 1 240px; min-width: 0; }
 .ticks { margin: 0; padding: 18px 18px 18px 40px; background: var(--card); border: 2px solid var(--line); border-radius: 18px; }
 .ticks li { margin: 6px 0; }
 .ticks li::marker { content: "✓  "; color: var(--accent); font-weight: 700; }
@@ -225,7 +229,13 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
 <section id="peel">
   <h2>Make your own stickers: Peel</h2>
   <p class="lead">Our free sticker maker for Android. The features other sticker apps charge for, or make you watch ads for, are free in Peel.</p>
-  <p class="note"><b>See it work:</b> <a href="https://refine-co.github.io/peel/" rel="noopener">three short films on the Peel site</a> — a photo becoming a sticker, a video becoming a moving sticker, and thirty text stickers in one tap.</p>
+  <div class="stickers seeit">
+    <span class="play" aria-hidden="true">▶</span>
+    <div class="copy">
+      <p><b>See it work.</b> Three short films: a photo becoming a sticker, a video becoming a moving sticker, and thirty text stickers in one tap.</p>
+    </div>
+    <a class="btn" href="https://refine-co.github.io/peel/" rel="noopener">Watch the demos</a>
+  </div>
   <div class="peel">
     <ul class="ticks">
       <li><b>Animated stickers</b> from your own videos and GIFs, no subscription</li>
