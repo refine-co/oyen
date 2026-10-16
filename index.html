@@ -62,10 +62,14 @@ h2 { font: 30px/1.1 "Luckiest Guy", "Fredoka", sans-serif; margin: 0 0 4px; text
 .ticks li::marker { content: "✓  "; color: var(--accent); font-weight: 700; }
 .offer { background: var(--hero); color: var(--hero-ink); border-radius: 18px; padding: 18px; }
 .offer a:not(.btn) { color: var(--lime); }
-.offer ol { padding-left: 22px; }
+.offer ol, .offer ul { padding-left: 22px; }
 .offer li { margin: 6px 0; }
 .tag { display: inline-block; margin: 0 0 8px; background: var(--lime); color: #1c0c26; font-weight: 700; font-size: 14px; padding: 3px 10px; border-radius: 999px; }
 .small { font-size: 14px; color: #d8c8de; }
+.herocta { margin: 18px auto 0; max-width: 560px; }
+.herocta .small { margin: 8px 0 0; }
+.herocta .small a { color: var(--lime); }
+.btn.big { font-size: 18px; padding: 14px 22px; border-radius: 14px; box-shadow: 0 3px 0 #0003; }
 footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(--soft); font-size: 15px; border-top: 2px solid var(--line); }
 </style>
 </head>
@@ -74,9 +78,13 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
   <img src="img/oyen-192.png" alt="Oyen the orange cat" width="84" height="84">
   <h1>Oyen Kampung printables</h1>
   <p>Free coloring pages, phone wallpapers and cozy art starring Oyen, a chubby orange cat from a Malaysian kampung. Tap any download. No sign-up.</p>
+  <div class="herocta">
+    <a class="btn big" href="https://play.google.com/store/apps/details?id=my.refineco.peel" rel="noopener">Get Peel, our free sticker maker</a>
+    <p class="small">Turn any photo into a WhatsApp sticker. Android, free, no ads and no account. <a href="#peel">What it does</a></p>
+  </div>
   <nav>
-    <a href="#watch">Watch</a><a href="#live">Live wallpapers</a><a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
-    <a href="#notebook">Comic</a><a href="#stickers">Free stickers</a><a href="#peel">Free sticker app</a>
+    <a href="#peel">Peel sticker app</a><a href="#watch">Watch</a><a href="#live">Live wallpapers</a><a href="#coloring">Coloring pages</a><a href="#wallpapers">Wallpapers</a><a href="#cozy">Cozy art</a>
+    <a href="#notebook">Comic</a><a href="#stickers">Free stickers</a>
   </nav>
 </header>
 <main>
@@ -246,7 +254,7 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
     <div class="copy">
       <p><b>See it work.</b> Three short films: a photo becoming a sticker, a video becoming a moving sticker, and thirty text stickers in one tap.</p>
     </div>
-    <a class="btn" href="https://refine-co.github.io/peel/" rel="noopener">Watch the demos</a>
+    <a class="btn" href="https://peel.refineco.app/" rel="noopener">Watch the demos</a>
   </div>
   <div class="peel">
     <ul class="ticks">
@@ -256,19 +264,19 @@ footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px 40px; color: var(
       <li><b>A whole pack at once</b>: up to 30 photos in one go</li>
       <li><b>Fix it with your finger</b>: erase, restore, magnifier, bold text, undo</li>
       <li><b>Back up and share packs</b>, so a new phone keeps them</li>
-      <li><b>No ads, no account, no watermark.</b> It has no internet permission, so your photos never leave your phone</li>
+      <li><b>No ads, no account, no watermark.</b> The cut-out runs on your phone and nothing you make is uploaded</li>
       <li>Oyen sticker packs built in</li>
     </ul>
     <div class="offer">
-      <p class="tag">Early tester offer</p>
-      <p><b>Help us test Peel for 14 days and get every future paid feature free, forever.</b> Peel is free today. If paid extras ever arrive, early testers get them at no cost.</p>
-      <ol>
-        <li><a href="https://groups.google.com/g/glean-closed-testers" rel="noopener">Join the tester group</a> with your Google account</li>
-        <li>Wait about 15 minutes, then open the <a href="https://play.google.com/apps/testing/my.refineco.peel" rel="noopener">tester link</a> and tap <b>Become a tester</b></li>
-        <li>Install Peel from Google Play, make one pack, and keep it installed for 14 days</li>
-      </ol>
-      <p class="small">Android only. Use the same Google account for all three steps. Questions: refine.co.my@gmail.com</p>
-      <a class="btn" href="https://play.google.com/apps/testing/my.refineco.peel" rel="noopener">Become a Peel tester</a>
+      <p class="tag">On Google Play</p>
+      <p><b>Peel is out.</b> It left testing on 12 October and anyone can install it — no invitation, no waiting list, no account.</p>
+      <ul>
+        <li>Free, and the sticker packs on the Peel site are free to import</li>
+        <li>Works offline: the cut-out happens on your phone</li>
+        <li>Oyen's own packs are built in</li>
+      </ul>
+      <p class="small">Android 7 and up. Questions: refine.co.my@gmail.com</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=my.refineco.peel" rel="noopener">Get Peel on Google Play</a>
     </div>
   </div>
 </section>
